@@ -1,8 +1,8 @@
-import { Storage } from '@google-cloud/storage';
-import { format } from 'util';
+const { Storage } = require('@google-cloud/storage');
+const { format } = require('util');
 // const env = require('../config/env')
 // const url = require('url');
-import { v4 as uuidv4 } from 'uuid';
+const { v4: uuidv4 } = require('uuid');
 const uuid = uuidv4();
 
 const storage = new Storage({
@@ -20,7 +20,7 @@ module.exports = (file, pathImage) => {
   return new Promise((resolve, reject) => {
     if (pathImage) {
       if (pathImage != null || pathImage != undefined) {
-        const fileUpload = bucket.file(`${pathImage}`);
+        let fileUpload = bucket.file(`${pathImage}`);
         const blobStream = fileUpload.createWriteStream({
           metadata: {
             contentType: 'image/png',
