@@ -6,11 +6,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
+    "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "rootDir": "./src",  // Añade esta línea
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
@@ -18,10 +17,6 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "allowJs": true,  // Añade esta línea si tienes archivos .js
-    "resolveJsonModule": true,  // Añade esta línea si necesitas importar archivos JSON
-    "esModuleInterop": true  // Añade esta línea para mejor interoperabilidad con módulos
-  },
-  "include": ["src/**/*"],  // Añade esta línea
-  "exclude": ["node_modules", "dist"]  // Añade esta línea
+    "allowJs": true
+  }
 }
